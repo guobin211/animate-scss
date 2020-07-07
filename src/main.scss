@@ -1,9 +1,15 @@
+@import "base/base";
+@import "mixin/image";
+
 html,body {
   margin: 0;
   height: 100%;
-  display: flex;
 }
 
 ::placeholder {
   color: gray;
+}
+
+.image {
+  @include imageUrl("assets/bg")
 }
