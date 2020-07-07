@@ -1,15 +1,14 @@
 @import "base/base";
 @import "mixin/image";
-
-html,body {
-  margin: 0;
-  height: 100%;
-}
-
-::placeholder {
-  color: gray;
-}
+@import "mixin/icon";
+@import "mixin/query";
+@import "mixin/reset";
+@import "button/button-group";
+@import "form/form";
+@import "layout/grid";
+@import "layout/layout";
+@import "table/table";
 
 .image {
-  @include imageUrl("assets/bg")
+  @include image-url("assets/bg")
 }
