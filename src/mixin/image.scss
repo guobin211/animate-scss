@@ -1,7 +1,19 @@
-@mixin imageUrl($path) {
+@mixin image-url($path) {
   background-image: url($path + "@1x.png");
-  
+
   @media (min-resolution: 2dppx) {
     background-image: url($path + "@2x.png");
+  }
+
+  @media (min-resolution: 3dppx) {
+    background-image: url($path + "@3x.png");
+  }
+}
+
+@mixin avatar($size, $circle: false) {
+  width: $size;
+  height: $size;
+  @if($circle) {
+    border-radius: $size / 2;
   }
 }

@@ -1,0 +1,41 @@
+@import "../base/@variable";
+
+/// Divides `$value` by `$ratio` until it's below `$base`
+@function scale-below($value, $base, $ratio: 1.618) {
+  @while ($value > $base) {
+    $value: $value / $ratio;
+  }
+  @return $value;
+}
+
+@function computed-width($width, $em) {
+  @if ($width > $sm) {
+    @return $sm;
+  } @else {
+    @return $width;
+  }
+}
+
+@mixin query($width) {
+  @if ($width < 0) {
+    @error "width: #{$width} must be number >=0"
+  }
+  width: $width + "em";
+
+  @media only screen and (max-width: $sm) {
+    width: computed-width($width, $sm) + "em";
+  }
+
+  @media only screen and (max-width: $md) {
+    width: computed-width($width, $md) + "em";
+  }
+
+  @media only screen and (max-width: $lg) {
+    width: computed-width($width, $lg) + "em";
+  }
+
+  @media only screen and (max-width: $xl) {
+    width: computed-width($width, $xl) + "em";
+  }
+
+}
