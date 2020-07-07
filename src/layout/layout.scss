@@ -1,0 +1,31 @@
+.as-g {
+  letter-spacing: -0.31em;
+  text-rendering: optimizespeed;
+  font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  table .as-g {
+    display: block;
+  }
+}
+
+.opera-only :-o-prefocus,
+.as-g {
+  word-spacing: -0.43em;
+}
+
+.as-u {
+  display: inline-block;
+  letter-spacing: normal;
+  word-spacing: normal;
+  vertical-align: top;
+  text-rendering: auto;
+}
+
+.as-g [class *= "as-u"] {
+  font-family: sans-serif;
+}
