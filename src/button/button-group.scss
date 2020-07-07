@@ -1,0 +1,17 @@
+@import "../base/@variable";
+
+.as-btn-group {
+  letter-spacing: -0.31em;
+  text-rendering: optimizespeed;
+}
+
+.opera-only :-o-prefocus, .as-btn-group {
+  word-spacing: -0.43em;
+}
+
+.as-btn-group .as-btn {
+  letter-spacing: normal;
+  word-spacing: normal;
+  vertical-align: top;
+  text-rendering: auto;
+}

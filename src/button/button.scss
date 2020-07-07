@@ -1,0 +1,72 @@
+@import "../base/@variable";
+
+.as-btn {
+  display: inline-block;
+  line-height: normal;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  -webkit-user-drag: none;
+  user-select: none;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 100%;
+  padding: 0.5em 1em;
+  color: $dark;
+  border: none rgba(0, 0, 0, 0);
+  background-color: $grey;
+  text-decoration: none;
+  border-radius: 2px;
+}
+
+.as-btn-hover,
+.as-btn:hover,
+.as-btn:focus {
+  background-image: linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
+}
+.as-btn:focus {
+  outline: 0;
+}
+.as-btn-active,
+.as-btn:active {
+  box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
+  border-color: #000;
+}
+
+.as-btn[disabled],
+.as-btn-disabled,
+.as-btn-disabled:hover,
+.as-btn-disabled:focus,
+.as-btn-disabled:active {
+  border: none;
+  background-image: none;
+  opacity: 0.40;
+  cursor: not-allowed;
+  box-shadow: none;
+  pointer-events: none;
+}
+
+.as-btn-primary,
+.as-btn-selected,
+a.as-btn-primary,
+a.as-btn-selected {
+  background-color: $primary;
+  color: #fff;
+}
+
+.as-btn-group .as-btn {
+  margin: 0;
+  border-radius: 0;
+  border-right: 1px solid $darkGrey;
+}
+
+.as-btn-group .as-btn:first-child {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+.as-btn-group .as-btn:last-child {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-right: none;
+}
