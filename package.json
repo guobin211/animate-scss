@@ -1,6 +1,9 @@
 {
   "name": "animate-scss",
   "version": "1.0.0",
+  "scripts": {
+    "buildcss": "gulp sass"
+  },
   "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^9.8.4",
